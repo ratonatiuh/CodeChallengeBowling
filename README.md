@@ -91,6 +91,11 @@ The program use streams and lambdas of java 8, and divided in clases organize as
 
 # Test
 
+To make a tests run:
+
+```
+$ mvn test
+```
 # How to
 
 to run the program download the code from github:
