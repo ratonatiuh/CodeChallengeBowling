@@ -136,3 +136,6 @@ Pinfalls        3        /      6       3                X      8       1       
 Score           16              25              44              53              82              101             110         124              132             151             151             %              
 
 ```
+
+if you want to change other file in the code, you can made in the mx.code.challenge..bowling.App change in the line 17 for another text, you can put another file in the BowlRecord directory and change the name.
+

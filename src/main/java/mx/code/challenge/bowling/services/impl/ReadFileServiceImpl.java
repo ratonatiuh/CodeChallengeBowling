@@ -38,8 +38,9 @@ public class ReadFileServiceImpl implements ReadFileService{
 		if(!bowlRecordAux[1].equals("F")){
 			pinfalls = Integer.parseInt(bowlRecordAux[1]);
 			bowlLine.setHit(0);
+			bowlLine.setFault(false);
 		}else
-			bowlLine.setHit(2);
+			bowlLine.setFault(true);;
 		bowlLine.setPinfalls(pinfalls);
 		return bowlLine;
 	}

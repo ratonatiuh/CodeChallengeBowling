@@ -15,9 +15,7 @@ public class App
         ReadFileService readFile = new ReadFileServiceImpl();
         ScoreBowlService scoreBowl = new ScoreBowlServiceImpl();
         List<BowlDomain> bowlList = readFile.readFileBowling("BowlRecord/bowlRecord_03.txt");
-        
         bowlList = scoreBowl.scoreService(bowlList);
-        
         String result = scoreBowl.printScores(bowlList);
         System.out.println(result);
         

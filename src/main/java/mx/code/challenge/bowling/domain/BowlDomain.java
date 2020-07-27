@@ -8,6 +8,7 @@ public class BowlDomain {
 	private Integer pinfalls;
 	private Integer score;
 	private Integer hit;
+	private Boolean fault;
 	
 	public Integer getFrame() {
 		return frame;
@@ -38,6 +39,12 @@ public class BowlDomain {
 	}
 	public void setHit(Integer hit) {
 		this.hit = hit;
+	}
+	public Boolean isFault() {
+		return fault;
+	}
+	public void setFault(Boolean fault) {
+		this.fault = fault;
 	}
 
 }

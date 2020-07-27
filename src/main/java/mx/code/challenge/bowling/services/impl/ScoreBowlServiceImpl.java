@@ -34,16 +34,8 @@ public class ScoreBowlServiceImpl implements ScoreBowlService {
 								+ turnPinFalls;
 						gamer.get(j).setScore(score);
 						gamer.get(j).setFrame(frame);
-						if(gamer.get(j).getHit() == 2)
-							gamer.get(j).setHit(2);
-						else
-							gamer.get(j).setHit(0);
 						gamer.get(j+1).setScore(score);
 						gamer.get(j+1).setFrame(frame);
-						if(gamer.get(j+1).getHit() == 2)
-							gamer.get(j+1).setHit(2);
-						else
-							gamer.get(j+1).setHit(1);
 						result.add(gamer.get(j));
 						result.add(gamer.get(j+1));
 						j++;
@@ -152,18 +144,27 @@ public class ScoreBowlServiceImpl implements ScoreBowlService {
 			result += "Pinfalls \t";
 			while(j<gamer.size()) {
 				if(gamer.get(j).getPinfalls() == 10) {
-					result += "\t X \t";
+					if(gamer.get(j).getFrame() != 10 ) {
+						result += "\t X \t";
+					}else {
+						result +="X \t";
+					}
 				}else if((j+1) < gamer.size() &&
 						(gamer.get(j).getPinfalls()+
 						gamer.get(j+1).getPinfalls()) ==10){
 					result += gamer.get(j).getPinfalls() + "\t /  \t";
 					j++;
 				}else {
-					if(gamer.get(j).getHit() == 2)
-						result += "F \t" + gamer.get(j+1).getPinfalls() + " \t";
-					else if((j+1) < gamer.size() && gamer.get(j+1).getHit() == 2)
-						result += gamer.get(j).getPinfalls() + " \t F \t";
-					else if((j+1) < gamer.size())
+					if(gamer.get(j).isFault()) {
+						result += "F \t"; 
+						if((j+1) < gamer.size() && gamer.get(j+1).isFault()) {
+									result += "F \t";
+						}else if((j+1) < gamer.size()){
+							result += gamer.get(j+1).getPinfalls() + "\t";
+						}
+					}else if(gamer.get(j).isFault() && (j+1)<gamer.size() && gamer.get(j+1).isFault()) {
+						result += "F \t F \t";
+					}else if((j+1) < gamer.size())
 						result += gamer.get(j).getPinfalls() + " \t" + gamer.get(j+1).getPinfalls() + " \t";
 					j++;
 				}
@@ -178,6 +179,10 @@ public class ScoreBowlServiceImpl implements ScoreBowlService {
 					j++;
 				}else {
 					j += 2;
+				}
+				if(gamer.get(j).getFrame() == 10) {
+					result += gamer.get(j).getScore();
+					break;
 				}
 			}
 			

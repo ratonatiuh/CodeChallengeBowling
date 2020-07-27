@@ -34,11 +34,11 @@ public class AppTest {
         String result =  "Frame 	 	1 	 	2 	 	3 	 	4 	 	5 	 	6 	 	7 	 	8 	 	9 	 	10 	 	\n";
         
         result += "Jeff\n";
-        result += "Pinfalls 		 X 	7	 /  	9 	0 		 X 	0 	8 	8	 /  	F 	6 		 X 		 X 		 X 	8 	1 	\n";
-        result += "Score 	 	20 	 	39 	 	48 	 	66 	 	74 	 	84 	 	90 	 	120 	 	148 	 	167 	 	167 	 	\n";
+        result += "Pinfalls 		 X 	7	 /  	9 	0 		 X 	0 	8 	8	 /  	F 	6		 X 		 X 	X 	8 	1 	\n";
+        result += "Score 	 	20 	 	39 	 	48 	 	66 	 	74 	 	84 	 	90 	 	120 	 	148 	 	167\n";
         result +=  "John\n";
-        result +=  "Pinfalls 	3	 /  	6 	3 		 X 	8 	1 		 X 		 X 	9 	0 	7	 /  	4 	4 		 X 	9 	0 	\n";
-        result +=  "Score 	 	16 	 	25 	 	44 	 	53 	 	82 	 	101 	 	110 	 	124 	 	132 	 	151 	 	151 	 	";
+        result +=  "Pinfalls 	3	 /  	6 	3 		 X 	8 	1 		 X 		 X 	9 	0 	7	 /  	4 	4 	X 	9 	0 	\n";
+        result +=  "Score 	 	16 	 	25 	 	44 	 	53 	 	82 	 	101 	 	110 	 	124 	 	132 	 	151";
     	
         assertEquals(result,  scoreBowl.printScores(bowlTest));
         System.out.println(scoreBowl.printScores(bowlTest));
@@ -59,8 +59,8 @@ public class AppTest {
         
         String result =  "Frame 	 	1 	 	2 	 	3 	 	4 	 	5 	 	6 	 	7 	 	8 	 	9 	 	10 	 	\n";
         result += "Carl\n";
-        result += "Pinfalls 		 X 		 X 		 X 		 X 		 X 		 X 		 X 		 X 		 X 		 X 		 X 		 X 	\n";
-        result += "Score 	 	30 	 	60 	 	90 	 	120 	 	150 	 	180 	 	210 	 	240 	 	270 	 	300 	 	300 	 	300 	 	";
+        result += "Pinfalls 		 X 		 X 		 X 		 X 		 X 		 X 		 X 		 X 		 X 	X 	X 	X 	\n";
+        result += "Score 	 	30 	 	60 	 	90 	 	120 	 	150 	 	180 	 	210 	 	240 	 	270 	 	300";
         assertEquals(result,  scoreBowl.printScores(bowlTest));
         System.out.println(scoreBowl.printScores(bowlTest));
     }
@@ -79,11 +79,11 @@ public class AppTest {
         
         String result =  "Frame 	 	1 	 	2 	 	3 	 	4 	 	5 	 	6 	 	7 	 	8 	 	9 	 	10 	 	\n";
         result += "Carl\n";
-        result += "Pinfalls 		 X 		 X 		 X 		 X 		 X 		 X 		 X 		 X 		 X 		 X 		 X 		 X 	\n";
-        result += "Score 	 	30 	 	60 	 	90 	 	120 	 	150 	 	180 	 	210 	 	240 	 	270 	 	300 	 	300 	 	300 	 	\n";
+        result += "Pinfalls 		 X 		 X 		 X 		 X 		 X 		 X 		 X 		 X 		 X 	X 	X 	X 	\n";
+        result += "Score 	 	30 	 	60 	 	90 	 	120 	 	150 	 	180 	 	210 	 	240 	 	270 	 	300\n";
         result += "Chanchis\n";
-        result += "Pinfalls 	F 	0 	F 	0 	F 	0 	F 	0 	F 	0 	F 	0 	F 	0 	F 	0 	F 	0 	F 	0 	\n";
-        result += "Score 	 	0 	 	0 	 	0 	 	0 	 	0 	 	0 	 	0 	 	0 	 	0 	 	0 	 	0 	 	";
+        result += "Pinfalls 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	\n";
+        result += "Score 	 	0 	 	0 	 	0 	 	0 	 	0 	 	0 	 	0 	 	0 	 	0 	 	0";
         
         assertEquals(result,  scoreBowl.printScores(bowlTest));
         System.out.println(scoreBowl.printScores(bowlTest));
