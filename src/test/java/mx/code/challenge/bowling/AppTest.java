@@ -82,7 +82,7 @@ public class AppTest {
         result += "Pinfalls 		 X 		 X 		 X 		 X 		 X 		 X 		 X 		 X 		 X 	X 	X 	X 	\n";
         result += "Score 	 	30 	 	60 	 	90 	 	120 	 	150 	 	180 	 	210 	 	240 	 	270 	 	300\n";
         result += "Chanchis\n";
-        result += "Pinfalls 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	\n";
+        result += "Pinfalls 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	\n";
         result += "Score 	 	0 	 	0 	 	0 	 	0 	 	0 	 	0 	 	0 	 	0 	 	0 	 	0";
         
         assertEquals(result,  scoreBowl.printScores(bowlTest));

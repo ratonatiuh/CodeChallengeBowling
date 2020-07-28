@@ -34,17 +34,13 @@ public class TestReadFileService {
 	@Test
 	public void testConvertBowlingDomain() {
 		ReadFileService readFile = new ReadFileServiceImpl();
-		BowlDomain bowlTest = readFile.convertToBowlDomain(new String[]{"Carl","10"}, 1);
+		BowlDomain bowlTest = readFile.convertToBowlDomain(new String[]{"Carl","10"});
 		System.out.println("1. Checking convert line of file to a BowlDomain.");
 		
 		BowlDomain bowlExpectative = new BowlDomain();
 		bowlExpectative.setName("Carl");
 		bowlExpectative.setPinfalls(10);
-		bowlExpectative.setFrame(1);
 		System.out.println("2. Checking name in bowlDomain " + bowlExpectative.getName());
-		
-		assertEquals(bowlTest.getName(), bowlExpectative.getName());
-		System.out.println("3. Checking Frame in bowlDomain " + bowlExpectative.getFrame());
 		
 		assertEquals(bowlTest.getFrame(), bowlExpectative.getFrame());
 		System.out.println("3. Checking Frame in bowlDomain " + bowlExpectative.getPinfalls());

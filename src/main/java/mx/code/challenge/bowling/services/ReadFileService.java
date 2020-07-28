@@ -5,9 +5,18 @@ import mx.code.challenge.bowling.domain.BowlDomain;
 
 public interface ReadFileService {
 	
+	/*
+	 * The readFileBowling function have a url of a file and return a List of BowlDomain
+	 * params: String
+	 * return: List<BowlDomain>
+	 */
 	public List<BowlDomain> readFileBowling(String url);
 		
-	
-	public BowlDomain convertToBowlDomain(String[] bowlRecordAux, int idBowl);
+	/*
+	 * The convertToBowlDomain function obtain the name, pinfalls and frame to put
+	 * params: String[], int
+	 * return: BowlDomain
+	 */
+	public BowlDomain convertToBowlDomain(String[] bowlRecordAux);
 
 }
