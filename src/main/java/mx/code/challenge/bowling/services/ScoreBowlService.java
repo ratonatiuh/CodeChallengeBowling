@@ -14,15 +14,13 @@ public interface ScoreBowlService {
 	 */
 	public List<BowlDomain> scoreService(List<BowlDomain> bowlList);
 	
-	
 	/*
-	 * The printScores function obtain the scorefile as a list of BowlDomain,
-	 * and return a String to print the value as order like a score bowl
-	 * params: List<BowlDomain>
-	 * return: String
+	 * The fillBowlRecord function fill the values of a BowlDomain,
+	 * and return the BowlDomain with the values needed.
+	 * params: BowlDomain
+	 * return: BowlDomain
 	 */
-	public String printScores(List<BowlDomain> bowlList);
-	
+	public BowlDomain fillBowlRecord(BowlDomain bowlD, int frame, int score, int hit);
 	
 	/*
 	 * The obtainNamePlayers function obtain the names of the players with a

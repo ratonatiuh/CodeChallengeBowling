@@ -9,8 +9,10 @@ import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 import mx.code.challenge.bowling.domain.BowlDomain;
+import mx.code.challenge.bowling.services.PrintScoreService;
 import mx.code.challenge.bowling.services.ReadFileService;
 import mx.code.challenge.bowling.services.ScoreBowlService;
+import mx.code.challenge.bowling.services.impl.PrintScoreServiceImpl;
 import mx.code.challenge.bowling.services.impl.ReadFileServiceImpl;
 import mx.code.challenge.bowling.services.impl.ScoreBowlServiceImpl;
 
@@ -23,6 +25,7 @@ public class AppTest {
     {
     	ReadFileService readFile = new ReadFileServiceImpl();
         ScoreBowlService scoreBowl = new ScoreBowlServiceImpl();
+        PrintScoreService printScore = new PrintScoreServiceImpl();
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         List<BowlDomain> bowlTest = readFile.readFileBowling("BowlRecord/bowlRecord_01.txt");
         
@@ -40,8 +43,8 @@ public class AppTest {
         result +=  "Pinfalls 	3	 /  	6 	3 		 X 	8 	1 		 X 		 X 	9 	0 	7	 /  	4 	4 	X 	9 	0 	\n";
         result +=  "Score 	 	16 	 	25 	 	44 	 	53 	 	82 	 	101 	 	110 	 	124 	 	132 	 	151";
     	
-        assertEquals(result,  scoreBowl.printScores(bowlTest));
-        System.out.println(scoreBowl.printScores(bowlTest));
+        assertEquals(result,  printScore.printScores(bowlTest));
+        System.out.println(printScore.printScores(bowlTest));
         
     }
     
@@ -50,6 +53,7 @@ public class AppTest {
     {
     	ReadFileService readFile = new ReadFileServiceImpl();
         ScoreBowlService scoreBowl = new ScoreBowlServiceImpl();
+        PrintScoreService printScore = new PrintScoreServiceImpl();
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         List<BowlDomain> bowlTest = readFile.readFileBowling("BowlRecord/bowlRecord_02.txt");
         
@@ -61,8 +65,8 @@ public class AppTest {
         result += "Carl\n";
         result += "Pinfalls 		 X 		 X 		 X 		 X 		 X 		 X 		 X 		 X 		 X 	X 	X 	X 	\n";
         result += "Score 	 	30 	 	60 	 	90 	 	120 	 	150 	 	180 	 	210 	 	240 	 	270 	 	300";
-        assertEquals(result,  scoreBowl.printScores(bowlTest));
-        System.out.println(scoreBowl.printScores(bowlTest));
+        assertEquals(result,  printScore.printScores(bowlTest));
+        System.out.println(printScore.printScores(bowlTest));
     }
     
     @Test
@@ -70,6 +74,7 @@ public class AppTest {
     {
     	ReadFileService readFile = new ReadFileServiceImpl();
         ScoreBowlService scoreBowl = new ScoreBowlServiceImpl();
+        PrintScoreService printScore = new PrintScoreServiceImpl();
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         List<BowlDomain> bowlTest = readFile.readFileBowling("BowlRecord/bowlRecord_03.txt");
         
@@ -85,8 +90,8 @@ public class AppTest {
         result += "Pinfalls 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	F 	\n";
         result += "Score 	 	0 	 	0 	 	0 	 	0 	 	0 	 	0 	 	0 	 	0 	 	0 	 	0";
         
-        assertEquals(result,  scoreBowl.printScores(bowlTest));
-        System.out.println(scoreBowl.printScores(bowlTest));
+        assertEquals(result,  printScore.printScores(bowlTest));
+        System.out.println(printScore.printScores(bowlTest));
         
     }
 }

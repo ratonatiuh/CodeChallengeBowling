@@ -4,7 +4,7 @@
   <groupId>mx.code.challenge.bowling</groupId>
   <artifactId>CodeChallengeBowling</artifactId>
   <packaging>jar</packaging>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
   <name>CodeChallengeBowling</name>
   <url>http://maven.apache.org</url>
   <properties>
